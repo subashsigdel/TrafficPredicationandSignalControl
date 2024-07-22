@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Traffic Monitoring</title>
+    <link rel="stylesheet" href="livetraffic.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"><img src="images/Traffic.svg" alt="LOGO"></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">LIVE TRAFFIC</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+    </header>
+    
+    <section id="live-traffic" class="live-traffic main">
+        <h2>Live Traffic Monitoring</h2>
+        <div class="content">
+            <div class="video-feed">
+                <video id="traffic-video" controls autoplay>
+                    <source src="traffic_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="traffic-light">
+                <div class="light" id="red"></div>
+                <div class="light" id="yellow"></div>
+                <div class="light" id="green"></div>
+            </div>
+        </div>
+        <div class="traffic-bars">
+            <img src="/images/newplot.png" alt="Traffic Congestion Chart">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Traffic Monitor. All Rights Reserved.</p>
+    </footer>
+
+    <script src="livetraffic.js"></script>
+</body>
+</html>
