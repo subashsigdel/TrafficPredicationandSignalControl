@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/templates/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="main">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo"><img src="images/Traffic.svg" alt="LOGO"></h2>
+                <h2 class="logo"><img src="{{ url_for('static', filename='images/Traffic.svg') }}" alt="LOGO"></h2>
             </div>
 
             <div class="menu">
@@ -38,11 +38,11 @@
                 <button class="cn"><a href="#">JOIN US</a></button>
 
                 <div class="form">
-                   
-                    <img class="logoimg" src="images/Traffic2.svg" alt="LOGO" srcset="">
-                    <input type="email" name="email" placeholder="Enter Email Here">
-                    <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="/livetraffic.html">Login</a></button>
+                    <form method="post" action="{{ url_for('index') }}">
+                        <img class="logoimg" src="{{ url_for('static', filename='images/Traffic.svg') }}" alt="LOGO">
+                        <input type="email" name="email" placeholder="Enter Email Here" required>
+                        <input type="password" name="password" placeholder="Enter Password Here" required>
+                        <button class="btnn" type="submit">Login</button>
 
                     <div class="icons">
                         <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>

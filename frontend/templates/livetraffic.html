@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Traffic Monitoring</title>
-    <link rel="stylesheet" href="livetraffic.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/livetraffic.css') }}">
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo"><img src="images/Traffic.svg" alt="LOGO"></h2>
+                <h2 class="logo"><img src="{{ url_for('static', filename='images/Traffic.svg') }}" alt="LOGO"></h2>
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">LIVE TRAFFIC</a></li>
@@ -36,13 +36,13 @@
             <div class="video-feed">
                 <h2 class="headlive1"> Live Veichle Detection</h2>
                 <h2 class="headlive3"> (High) </h2>
-                <video id="traffic-video" controls autoplay>
-                    <source src="/images/detection.mp4" type="video/mp4">
+                <video id="traffic-video" autoplay>
+                    <source src="{{ url_for('static', filename='images/detection.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
 
-            <div >
+            <div>
                 <h2 class="headlive2"> Live Traffic Signal </h2>
                 <div class="traffic-light">
                     <div class="light" id="red"></div>
@@ -108,7 +108,7 @@
             </div>
 
             <div class="traffic-bars">
-                <img src="/images/newplot.png" alt="Traffic Congestion Chart">
+                <img src="{{ url_for('static', filename='images/newplot.png') }}" alt="Traffic Congestion Chart">
             </div>
 
         </div>
@@ -119,6 +119,6 @@
         <p>&copy; 2024 Traffic Monitor. All Rights Reserved.</p>
     </footer>
 
-    <script src="livetraffic.js"></script>
+    <script src="{{ url_for('static', filename='js/livetraffic.js') }}"></script>
 </body>
 </html>
