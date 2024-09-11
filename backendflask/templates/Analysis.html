@@ -17,8 +17,8 @@
                 <ul>
                     <li><a href="/">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">LIVE TRAFFIC</a></li>
+                    <li><a href="#">Traffic Analysis</a></li>
+                    <li><a href="{{ url_for('livetraffic') }}">LIVE TRAFFIC</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
@@ -32,28 +32,6 @@
     </header>
     
     <section id="live-traffic" class="live-traffic main">
-        <div class="grid">
-            <div class="video-feed">
-                <h2 class="headlive1"> Live Veichle Detection</h2>
-                <h2 class="headlive3"> (High) </h2>
-                <video id="traffic-video" autoplay>
-                    <source src="{{ url_for('static', filename='images/detection.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <div>
-                <h2 class="headlive2"> Live Traffic Signal </h2>
-                <div class="traffic-light">
-                    <div class="light" id="red"></div>
-                    <div class="light" id="yellow"></div>
-                    <div class="light" id="green"></div>
-
-                </div>
-
-            </div>
-
-        </div>
         <div class="grid2">
             <div>
                 <table>

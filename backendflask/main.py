@@ -12,7 +12,7 @@ def index():
         # Process login (e.g., authenticate user, check password, etc.)
         if authenticate_user(email, password):
             # Redirect to the livetraffic page upon successful login
-            return redirect(url_for('livetraffic'))
+            return redirect(url_for('liveanalysis'))
         else:
             # Redirect back to index or handle failure
             return redirect(url_for('index'))  # Customize if needed
@@ -25,6 +25,10 @@ def authenticate_user(email, password):
     correct_password = 'password123'
     
     return email == correct_email and password == correct_password
+
+@app.route('/liveanalysis')
+def liveanalysis():
+    return render_template('Analysis.html')
 
 @app.route('/livetraffic')
 def livetraffic():
