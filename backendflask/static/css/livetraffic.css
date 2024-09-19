@@ -17,6 +17,7 @@ body {
     background-color: #173B45;
     background-position: center;
     background-size: cover;
+    height: 100vh;
 }
 
 .navbar{
@@ -201,8 +202,12 @@ video{
 }
 .headlive3{
     text-align: center;
-    color: #F8EDED;
+    color: #fdfdfd;
     font-size: 10px;
+    
+}
+.three{
+    color: #ffffff;
 }
 
 .grid2{

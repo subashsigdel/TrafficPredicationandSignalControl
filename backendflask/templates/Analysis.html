@@ -36,52 +36,18 @@
             <div>
                 <table>
                     <tr>
-                        <th>time</th>
+                        <th>Time</th>
                         <th>Day</th>
                         <th>Traffic Situation</th>
                     </tr>
-                    
+                    <!-- Loop through the CSV data and display each row -->
+                    {% for row in data %}
                     <tr>
-                        <td>6:00</td>
-                        <td>Tuesday</td>
-                        <td>High</td>
+                        <td>{{ row[0] }}</td>  <!-- Time -->
+                        <td>{{ row[1] }}</td>  <!-- Day -->
+                        <td>{{ row[2] }}</td>  <!-- Traffic Situation -->
                     </tr>
-                    <tr>
-                        <td>5:00</td>
-                        <td>Tuesday</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td>4:00</td>
-                        <td>Tuesday</td>
-                        <td>Medium</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                        <td>Tuesday</td>
-                        <td>Low</td>
-                    </tr>
-                    <tr>
-                        <td>6:00</td>
-                        <td>Tuesday</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td>5:00</td>
-                        <td>Tuesday</td>
-                        <td>High</td>
-                    </tr>
-                    <tr>
-                        <td>4:00</td>
-                        <td>Tuesday</td>
-                        <td>Medium</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                        <td>Tuesday</td>
-                        <td>Low</td>
-                    </tr>
-
+                    {% endfor %}
                 </table>
             </div>
 

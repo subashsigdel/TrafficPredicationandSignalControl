@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="/">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">Traffic Analysis</a></li>
+                    <li><a href="/">Traffic Analysis</a></li>
                     <li><a href="#">LIVE TRAFFIC</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
@@ -35,9 +35,23 @@
         <div class="grid">
             <div class="video-feed">
                 <h2 class="headlive1"> Live Veichle Detection</h2>
-                <h2 class="headlive3"> (High) </h2>
-                <video id="traffic-video" autoplay>
-                    <source src="{{ url_for('static', filename='images/detection.mp4') }}" type="video/mp4">
+                <div class="three">
+                    <h2 class="headlive3">
+                        {% if last_row %}
+                        <h2>Time: {{ last_row[0] }}</h2>
+                        <h2>Day: {{ last_row[1] }}</h2>
+                        <h3>Traffic Situation: {{ last_row[2] }}</h3>
+                        {% else %}
+                        <h2>No data available</h2>
+                        {% endif %}
+                    
+                    </h2>
+
+
+                </div>
+    
+                <video id="traffic-video" autoplay loop>
+                    <source src="{{ url_for('static', filename='images/tf.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
