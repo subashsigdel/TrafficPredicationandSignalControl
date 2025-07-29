@@ -8,7 +8,7 @@ model = YOLO('/content/drive/MyDrive/Trafficdetectionruns/detect/train/weights/b
 # Run the detection on the video
 results = model.predict(source='/content/drive/MyDrive/Trafficdetectionruns/predict/trafficvideo.avi', conf=0.25, save=True)
 
-# Class names as per YOLOv8 model (you may need to adjust these based on your training)
+
 vehicle_classes = {'bike': 0, 'bus': 1, 'car': 2, 'green-light': 3,'motorbike':4,'red-light':5,'truck':6,'yello-light':7}  # Example class IDs for car, bike, etc.
 vehicle_count = {'bike': 0, 'bus': 0, 'car': 0, 'green-light': 0,'motorbike':0,'red-light':0,'truck':0,'yello-light':0}
 
@@ -34,7 +34,7 @@ am_pm = 1 if hour >= 12 else 0  # 1 for PM, 0 for AM
 if hour > 12:
     hour -= 12
 
-# Prepare the data in the specified format
+
 new_data = {
     'Date': date,
     'Day of the week': day_of_week,

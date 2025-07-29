@@ -29,7 +29,7 @@ var trafficChart = new Chart(ctx, {
         }]
     },
     options: {
-        responsive: true,  // Make the chart responsive
+        responsive: true,  
         scales: {
             y: {
                 beginAtZero: true,
